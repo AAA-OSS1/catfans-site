@@ -3,81 +3,81 @@ import Image from 'next/image'
 export const dynamic = 'force-static'
 
 export const metadata = {
-  title: 'CatFans — Перезагрузка: Истоки',
+  title: 'CatFans — Reboot: Origins',
   description:
-    'Иммерсивный eco-retreat в Крыму: цифровой детокс, природа, восстановление и погружение в другой ритм жизни.',
+    'Immersive eco-retreat in Crimea: digital detox, nature, recovery, and a return to a slower rhythm of life.',
 }
 
 const sections = [
   {
     icon: '🌿',
-    title: 'Цифровой детокс',
-    text: 'Полное отключение от информационного шума и возвращение к естественному ритму жизни.',
+    title: 'Digital Detox',
+    text: 'Complete disconnection from information overload and a return to a natural rhythm of life.',
   },
   {
     icon: '⛰️',
-    title: 'Жизнь древних культур',
-    text: 'Погружение в атмосферу традиционного быта, природы и аутентичного опыта.',
+    title: 'Ancient Lifestyle',
+    text: 'Immersion in traditional living, nature, and authentic experiences.',
   },
   {
     icon: '✨',
-    title: 'Внутреннее восстановление',
-    text: 'Не развлекательный отдых, а глубокая внутренняя перезагрузка.',
+    title: 'Inner Recovery',
+    text: 'Not entertainment-based relaxation, but a deep internal reset.',
   },
 ]
 
 const timeline = [
   {
     icon: '🌱',
-    day: 'День 1',
-    text: 'Отказ от цифровой среды и погружение в атмосферу проекта.',
+    day: 'Day 1',
+    text: 'Disconnecting from the digital world and entering the atmosphere of the project.',
   },
   {
     icon: '🥾',
-    day: 'День 2–3',
-    text: 'Жизнь в ритме природы, физическая активность и участие в повседневном быте.',
+    day: 'Day 2–3',
+    text: 'Living in rhythm with nature, physical activity, and participation in everyday routines.',
   },
   {
     icon: '🧘',
-    day: 'День 4',
-    text: 'Глубокое восстановление, осознанность и внутреннее замедление.',
+    day: 'Day 4',
+    text: 'Deep recovery, mindfulness, and inner slowing down.',
   },
   {
     icon: '☀️',
-    day: 'День 5',
-    text: 'Возвращение в современный мир с новым состоянием и восприятием.',
+    day: 'Day 5',
+    text: 'Returning to modern life with a renewed state of mind and perspective.',
   },
 ]
 
 const audience = [
-  '🌲 Усталость от города и информационного шума',
-  '🕊️ Эмоциональное выгорание',
-  '🌿 Потребность в восстановлении',
-  '✨ Поиск осмысленного отдыха',
-  '⛰️ Желание прожить уникальный опыт',
-  '🍃 Интерес к природе и культуре Крыма',
+  '🌲 Tired of city life and information overload',
+  '🕊️ Emotional burnout',
+  '🌿 Need for recovery',
+  '✨ Searching for meaningful rest',
+  '⛰️ Desire to experience something unique',
+  '🍃 Interest in nature and Crimean culture',
 ]
 
 const faq = [
   {
-    q: 'Нужна ли специальная подготовка?',
-    a: 'Нет. Программа рассчитана на обычных людей без специального опыта.',
+    q: 'Do I need special training?',
+    a: 'No. The program is designed for ordinary people without special experience.',
   },
   {
-    q: 'Будет ли интернет?',
-    a: 'Проект предполагает цифровой детокс и минимизацию контакта с технологиями.',
+    q: 'Will there be internet access?',
+    a: 'The project is based on digital detox and minimizing contact with technology.',
   },
   {
-    q: 'Безопасно ли участие?',
-    a: 'Все активности проходят под сопровождением команды проекта.',
+    q: 'Is it safe?',
+    a: 'All activities are supervised by the project team.',
   },
   {
-    q: 'Какой уровень комфорта?',
-    a: 'Мы сохраняем баланс между аутентичностью, безопасностью и базовым комфортом.',
+    q: 'What level of comfort should I expect?',
+    a: 'We maintain a balance between authenticity, safety, and basic comfort.',
   },
 ]
 
-export default function ImmersiveLanding() {
+export default function ImmersiveLandingEN() {
   return (
     <main className="bg-[#04140b] text-[#f4f1e8] min-h-screen overflow-hidden">
 
@@ -88,7 +88,7 @@ export default function ImmersiveLanding() {
 
           <Image
             src="/images/hero.webp"
-            alt="Природа"
+            alt="Nature"
             fill
             priority
             quality={72}
@@ -107,14 +107,14 @@ export default function ImmersiveLanding() {
 
             <a
               href="/"
-              className="px-4 py-2 rounded-xl bg-[#6f8f3a] text-white"
+              className="px-4 py-2 rounded-xl border border-[#8ea86d]/25 bg-[#102117]/40 hover:bg-[#1a3322] transition"
             >
               RU
             </a>
 
             <a
               href="/en"
-              className="px-4 py-2 rounded-xl border border-[#8ea86d]/25 bg-[#102117]/40 hover:bg-[#1a3322] transition"
+              className="px-4 py-2 rounded-xl bg-[#6f8f3a] text-white"
             >
               EN
             </a>
@@ -122,16 +122,16 @@ export default function ImmersiveLanding() {
           </div>
 
           <p className="uppercase tracking-[0.35em] text-sm text-[#c7d6a1] mb-6">
-            ЭКО • RETREAT • IMMERSIVE EXPERIENCE
+            ECO • RETREAT • IMMERSIVE EXPERIENCE
           </p>
 
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-            Перезагрузка: Истоки
+            Reboot: Origins
           </h1>
 
           <p className="text-lg md:text-2xl text-[#d9e5d0] max-w-3xl mx-auto mb-10 leading-relaxed">
-            Временный выход из современной реальности ради восстановления через
-            природу, традиции и образ жизни древних культур.
+            A temporary escape from modern reality for recovery through nature,
+            traditions, and the lifestyle of ancient cultures.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -142,14 +142,14 @@ export default function ImmersiveLanding() {
               rel="noopener noreferrer"
               className="px-8 py-4 rounded-2xl bg-[#6f8f3a] text-white font-semibold hover:scale-105 transition shadow-xl shadow-[#6f8f3a]/20"
             >
-              🌿 Подать заявку
+              🌿 Apply Now
             </a>
 
             <a
               href="#concept"
               className="px-8 py-4 rounded-2xl border border-[#8ea86d]/20 bg-[#102117]/50 backdrop-blur-sm hover:bg-[#1a3322] transition"
             >
-              Узнать концепцию
+              Explore the Concept
             </a>
 
           </div>
@@ -157,19 +157,19 @@ export default function ImmersiveLanding() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 text-sm">
 
             <div className="border border-[#8ea86d]/15 rounded-2xl p-4 bg-[#102117]/55 backdrop-blur-sm">
-              🌿 5 дней погружения
+              🌿 5 Days Immersion
             </div>
 
             <div className="border border-[#8ea86d]/15 rounded-2xl p-4 bg-[#102117]/55 backdrop-blur-sm">
-              📵 Цифровой детокс
+              📵 Digital Detox
             </div>
 
             <div className="border border-[#8ea86d]/15 rounded-2xl p-4 bg-[#102117]/55 backdrop-blur-sm">
-              ⛰️ Природа Крыма
+              ⛰️ Nature of Crimea
             </div>
 
             <div className="border border-[#8ea86d]/15 rounded-2xl p-4 bg-[#102117]/55 backdrop-blur-sm">
-              ✨ Ограниченные места
+              ✨ Limited Spots
             </div>
 
           </div>
@@ -189,7 +189,7 @@ export default function ImmersiveLanding() {
 
             <Image
               src="/images/hero.webp"
-              alt="Природа"
+              alt="Nature"
               width={1200}
               height={800}
               quality={68}
@@ -198,18 +198,18 @@ export default function ImmersiveLanding() {
             />
 
             <p className="uppercase text-sm tracking-[0.3em] text-[#c7d6a1] mb-4">
-              О проекте
+              About the Project
             </p>
 
             <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-              Это не туризм.
+              This is not tourism.
               <br />
-              Это проживание другой реальности.
+              This is living inside another reality.
             </h2>
 
             <p className="text-[#d9e5d0] text-lg leading-relaxed">
-              Проект объединяет элементы этнокультурного погружения,
-              природного восстановления и цифрового детокса.
+              The project combines elements of ethnocultural immersion,
+              natural recovery, and digital detox.
             </p>
 
           </div>
@@ -250,11 +250,11 @@ export default function ImmersiveLanding() {
           <div className="mb-16 text-center">
 
             <p className="uppercase text-sm tracking-[0.3em] text-[#c7d6a1] mb-4">
-              Как проходит опыт
+              How the Experience Works
             </p>
 
             <h2 className="text-4xl md:text-5xl font-bold">
-              Путь внутренней перезагрузки
+              The Path of Inner Reboot
             </h2>
 
           </div>
@@ -293,11 +293,11 @@ export default function ImmersiveLanding() {
         <div className="text-center mb-16">
 
           <p className="uppercase text-sm tracking-[0.3em] text-[#c7d6a1] mb-4">
-            Для кого проект
+            Who This Project Is For
           </p>
 
           <h2 className="text-4xl md:text-5xl font-bold">
-            Для тех, кто устал жить на скорости
+            For Those Tired of Living at Full Speed
           </h2>
 
         </div>
@@ -325,7 +325,7 @@ export default function ImmersiveLanding() {
 
             <Image
               src="/images/bg.webp"
-              alt="Immersive"
+              alt="Immersive Experience"
               width={1400}
               height={900}
               quality={68}
@@ -338,37 +338,37 @@ export default function ImmersiveLanding() {
           <div>
 
             <p className="uppercase text-sm tracking-[0.3em] text-[#c7d6a1] mb-4">
-              Что входит
+              What’s Included
             </p>
 
             <h2 className="text-4xl md:text-5xl font-bold mb-8">
-              Полное погружение
+              Full Immersion
             </h2>
 
             <div className="space-y-4 text-lg text-[#d9e5d0]">
 
               <div className="border-b border-[#8ea86d]/15 pb-4">
-                ✓ Проживание в атмосферной локации
+                ✓ Accommodation in an atmospheric location
               </div>
 
               <div className="border-b border-[#8ea86d]/15 pb-4">
-                ✓ Питание и сопровождение
+                ✓ Meals and guidance
               </div>
 
               <div className="border-b border-[#8ea86d]/15 pb-4">
-                ✓ Физическая активность и природа
+                ✓ Physical activity and nature immersion
               </div>
 
               <div className="border-b border-[#8ea86d]/15 pb-4">
-                ✓ Культурная и этническая программа
+                ✓ Cultural and ethnic program
               </div>
 
               <div className="border-b border-[#8ea86d]/15 pb-4">
-                ✓ Практики восстановления и осознанности
+                ✓ Recovery and mindfulness practices
               </div>
 
               <div className="border-b border-[#8ea86d]/15 pb-4">
-                ✓ Минимизация цифрового шума
+                ✓ Minimal digital noise
               </div>
 
             </div>
@@ -384,22 +384,22 @@ export default function ImmersiveLanding() {
         <div className="max-w-5xl mx-auto text-center">
 
           <p className="uppercase text-sm tracking-[0.3em] text-[#c7d6a1] mb-4">
-            Локация
+            Location
           </p>
 
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            Крым • Природное пространство проекта
+            Crimea • Natural Retreat Area
           </h2>
 
           <p className="text-[#d9e5d0] text-lg leading-relaxed max-w-3xl mx-auto mb-10">
-            Проект проходит в природной локации Крыма вдали от городского шума
-            и цифровой перегрузки.
+            The project takes place in a natural area of Crimea far from city
+            noise and digital overload.
           </p>
 
           <div className="rounded-3xl border border-[#8ea86d]/15 bg-[#102117]/65 p-8 backdrop-blur-sm shadow-xl inline-block">
 
             <div className="text-[#c7d6a1] text-sm uppercase tracking-[0.2em] mb-3">
-              Координаты для навигатора
+              Navigation Coordinates
             </div>
 
             <a
@@ -428,7 +428,7 @@ export default function ImmersiveLanding() {
             </p>
 
             <h2 className="text-4xl md:text-5xl font-bold">
-              Частые вопросы
+              Frequently Asked Questions
             </h2>
 
           </div>
@@ -464,7 +464,7 @@ export default function ImmersiveLanding() {
 
           <Image
             src="/images/cat1.webp"
-            alt="Природа"
+            alt="Nature"
             fill
             quality={65}
             loading="lazy"
@@ -479,18 +479,18 @@ export default function ImmersiveLanding() {
         <div className="relative z-10 max-w-4xl mx-auto">
 
           <p className="uppercase text-sm tracking-[0.3em] text-[#c7d6a1] mb-6">
-            Финальный шаг
+            Final Step
           </p>
 
           <h2 className="text-5xl md:text-7xl font-bold leading-tight mb-8">
-            Ты не отдыхаешь —
+            You are not escaping —
             <br />
-            ты возвращаешься к себе
+            you are returning to yourself
           </h2>
 
           <p className="text-xl text-[#e5eddc] mb-12 leading-relaxed">
-            Количество мест ограничено. Оставьте заявку и получите информацию
-            о ближайших заездах.
+            Places are limited. Leave an application and receive information
+            about upcoming retreats.
           </p>
 
           <a
@@ -499,7 +499,7 @@ export default function ImmersiveLanding() {
             rel="noopener noreferrer"
             className="inline-flex px-10 py-5 rounded-2xl bg-[#6f8f3a] text-white text-lg font-semibold hover:scale-105 transition shadow-xl shadow-[#6f8f3a]/20"
           >
-            🌿 Подать заявку
+            🌿 Apply Now
           </a>
 
         </div>
@@ -511,7 +511,7 @@ export default function ImmersiveLanding() {
         <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/60">
 
           <div>
-            © 2026 CatFans. Все права защищены.
+            © 2026 CatFans. All rights reserved.
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-6">
@@ -520,7 +520,7 @@ export default function ImmersiveLanding() {
               href="mailto:no_the_cat@vk.com"
               className="hover:text-white transition"
             >
-              Наши контакты: no_the_cat@vk.com
+              Сontacts: no_the_cat@vk.com
             </a>
 
             <a
@@ -536,7 +536,7 @@ export default function ImmersiveLanding() {
               href="/privacy"
               className="hover:text-white transition"
             >
-              Политика конфиденциальности
+              Privacy Policy
             </a>
 
           </div>
