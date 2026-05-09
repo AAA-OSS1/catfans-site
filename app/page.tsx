@@ -1,4 +1,5 @@
 export const dynamic = 'force-static'
+
 export default function ImmersiveLanding() {
   const sections = [
     {
@@ -74,10 +75,17 @@ export default function ImmersiveLanding() {
       <section className="relative min-h-screen flex items-center justify-center px-6">
         <div className="absolute inset-0">
           <img
-  src="/images/hero.jpg"
-  alt="Nature"
-  className="w-full h-full object-cover opacity-60"
-/>
+            src="/images/hero.jpg"
+            alt="Nature"
+            width={1920}
+            height={1080}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            draggable="false"
+            className="w-full h-full object-cover opacity-60 select-none"
+          />
+
           <div className="absolute inset-0 bg-gradient-to-b from-[#021008]/70 via-[#0b2415]/70 to-[#04140b]/90" />
         </div>
 
@@ -116,12 +124,15 @@ export default function ImmersiveLanding() {
             <div className="border border-[#8ea86d]/20 rounded-2xl p-4 backdrop-blur-md bg-[#102117]/60 shadow-xl">
               🌿 5 дней погружения
             </div>
+
             <div className="border border-[#8ea86d]/20 rounded-2xl p-4 backdrop-blur-md bg-[#102117]/60 shadow-xl">
               📵 Цифровой детокс
             </div>
+
             <div className="border border-[#8ea86d]/20 rounded-2xl p-4 backdrop-blur-md bg-[#102117]/60 shadow-xl">
               ⛰️ Природа Крыма
             </div>
+
             <div className="border border-[#8ea86d]/20 rounded-2xl p-4 backdrop-blur-md bg-[#102117]/60 shadow-xl">
               ✨ Ограниченные места
             </div>
@@ -135,7 +146,12 @@ export default function ImmersiveLanding() {
             <img
               src="/images/hero.jpg"
               alt="Nature"
-              className="rounded-3xl shadow-[0_20px_80px_rgba(0,0,0,0.45)] mb-10"
+              width={1200}
+              height={800}
+              loading="lazy"
+              decoding="async"
+              draggable="false"
+              className="rounded-3xl shadow-[0_20px_80px_rgba(0,0,0,0.45)] mb-10 select-none"
             />
 
             <p className="uppercase text-sm tracking-[0.3em] text-[#c7d6a1] mb-4">
@@ -161,8 +177,14 @@ export default function ImmersiveLanding() {
                 className="border border-[#8ea86d]/20 bg-[#102117]/70 rounded-3xl p-8 backdrop-blur-md shadow-[0_20px_80px_rgba(0,0,0,0.45)]"
               >
                 <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="text-2xl font-semibold mb-3">{item.title}</h3>
-                <p className="text-[#d9e5d0] leading-relaxed">{item.text}</p>
+
+                <h3 className="text-2xl font-semibold mb-3">
+                  {item.title}
+                </h3>
+
+                <p className="text-[#d9e5d0] leading-relaxed">
+                  {item.text}
+                </p>
               </div>
             ))}
           </div>
@@ -188,9 +210,16 @@ export default function ImmersiveLanding() {
                 className="border border-[#8ea86d]/20 rounded-3xl p-8 bg-[#102117]/70 backdrop-blur-md shadow-[0_20px_80px_rgba(0,0,0,0.45)]"
               >
                 <div className="text-5xl mb-4">{item.icon}</div>
+
                 <div className="text-[#c7d6a1] mb-4">{item.day}</div>
-                <h3 className="text-2xl font-semibold mb-4">{item.day}</h3>
-                <p className="text-[#d9e5d0] leading-relaxed">{item.text}</p>
+
+                <h3 className="text-2xl font-semibold mb-4">
+                  {item.day}
+                </h3>
+
+                <p className="text-[#d9e5d0] leading-relaxed">
+                  {item.text}
+                </p>
               </div>
             ))}
           </div>
@@ -226,7 +255,12 @@ export default function ImmersiveLanding() {
             <img
               src="/images/bg.jpg"
               alt="Immersive"
-              className="rounded-3xl w-full h-[600px] object-cover shadow-[0_20px_80px_rgba(0,0,0,0.45)]"
+              width={1400}
+              height={900}
+              loading="lazy"
+              decoding="async"
+              draggable="false"
+              className="rounded-3xl w-full h-[600px] object-cover shadow-[0_20px_80px_rgba(0,0,0,0.45)] select-none"
             />
           </div>
 
@@ -240,12 +274,29 @@ export default function ImmersiveLanding() {
             </h2>
 
             <div className="space-y-4 text-lg text-[#d9e5d0]">
-              <div className="border-b border-[#8ea86d]/20 pb-4">✓ Проживание в атмосферной локации</div>
-              <div className="border-b border-[#8ea86d]/20 pb-4">✓ Питание и сопровождение</div>
-              <div className="border-b border-[#8ea86d]/20 pb-4">✓ Физическая активность и природа</div>
-              <div className="border-b border-[#8ea86d]/20 pb-4">✓ Культурная и этническая программа</div>
-              <div className="border-b border-[#8ea86d]/20 pb-4">✓ Практики восстановления и осознанности</div>
-              <div className="border-b border-[#8ea86d]/20 pb-4">✓ Минимизация цифрового шума</div>
+              <div className="border-b border-[#8ea86d]/20 pb-4">
+                ✓ Проживание в атмосферной локации
+              </div>
+
+              <div className="border-b border-[#8ea86d]/20 pb-4">
+                ✓ Питание и сопровождение
+              </div>
+
+              <div className="border-b border-[#8ea86d]/20 pb-4">
+                ✓ Физическая активность и природа
+              </div>
+
+              <div className="border-b border-[#8ea86d]/20 pb-4">
+                ✓ Культурная и этническая программа
+              </div>
+
+              <div className="border-b border-[#8ea86d]/20 pb-4">
+                ✓ Практики восстановления и осознанности
+              </div>
+
+              <div className="border-b border-[#8ea86d]/20 pb-4">
+                ✓ Минимизация цифрового шума
+              </div>
             </div>
           </div>
         </div>
@@ -268,8 +319,13 @@ export default function ImmersiveLanding() {
               key={item.q}
               className="rounded-3xl border border-[#8ea86d]/20 bg-[#102117]/70 p-8 backdrop-blur-md shadow-[0_20px_80px_rgba(0,0,0,0.45)]"
             >
-              <h3 className="text-2xl font-semibold mb-4">🍃 {item.q}</h3>
-              <p className="text-[#d9e5d0] leading-relaxed">{item.a}</p>
+              <h3 className="text-2xl font-semibold mb-4">
+                🍃 {item.q}
+              </h3>
+
+              <p className="text-[#d9e5d0] leading-relaxed">
+                {item.a}
+              </p>
             </div>
           ))}
         </div>
@@ -280,8 +336,14 @@ export default function ImmersiveLanding() {
           <img
             src="/images/cat1.jpg"
             alt="Nature"
-            className="w-full h-full object-cover opacity-50"
+            width={1920}
+            height={1080}
+            loading="lazy"
+            decoding="async"
+            draggable="false"
+            className="w-full h-full object-cover opacity-50 select-none"
           />
+
           <div className="absolute inset-0 bg-gradient-to-b from-[#021008]/70 to-[#04140b]/90" />
         </div>
 
@@ -310,38 +372,38 @@ export default function ImmersiveLanding() {
           </a>
         </div>
       </section>
+
       <footer className="w-full border-t border-white/10 mt-20">
-  <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/60">
-    
-    <div>
-      © 2026 CatFans. Все права защищены.
-    </div>
+        <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/60">
+          <div>
+            © 2026 CatFans. Все права защищены.
+          </div>
 
-    <div className="flex items-center gap-6">
-      <a
-        href="mailto:no_the_cat@vk.com"
-        className="hover:text-white transition"
-      >
-        Наши контакты: no_the_cat@vk.com
-      </a>
+          <div className="flex items-center gap-6">
+            <a
+              href="mailto:no_the_cat@vk.com"
+              className="hover:text-white transition"
+            >
+              Наши контакты: no_the_cat@vk.com
+            </a>
 
-      <a
-        href="https://t.me/alinaswede"
-        target="_blank"
-        className="hover:text-white transition"
-      >
-        Telegram
-      </a>
-      <a
-  href="/privacy"
-  className="hover:text-white transition"
->
-  Политика конфиденциальности
-</a>
-    </div>
-  </div>
-</footer>
+            <a
+              href="https://t.me/alinaswede"
+              target="_blank"
+              className="hover:text-white transition"
+            >
+              Telegram
+            </a>
+
+            <a
+              href="/privacy"
+              className="hover:text-white transition"
+            >
+              Политика конфиденциальности
+            </a>
+          </div>
+        </div>
+      </footer>
     </main>
-    
   )
 }
