@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export const dynamic = 'force-static'
 
@@ -6,6 +7,12 @@ export const metadata = {
   title: 'CatFans — Перезагрузка: Истоки',
   description:
     'Иммерсивный eco-retreat в Крыму: цифровой детокс, природа, восстановление и погружение в другой ритм жизни.',
+  openGraph: {
+    title: 'CatFans — Перезагрузка: Истоки',
+    description:
+      'Иммерсивный eco-retreat в Крыму: цифровой детокс, природа, восстановление и погружение в другой ритм жизни.',
+    url: 'https://catfans.ru',
+  },
 }
 
 const sections = [
@@ -16,7 +23,7 @@ const sections = [
   },
   {
     icon: '⛰️',
-    title: 'Жизнь древних культур',
+    title: 'Жизнь степных культур',
     text: 'Погружение в атмосферу традиционного быта, природы и аутентичного опыта.',
   },
   {
@@ -80,175 +87,235 @@ const faq = [
 export default function ImmersiveLanding() {
   return (
     <main className="bg-[#04140b] text-[#f4f1e8] min-h-screen overflow-hidden">
-
       {/* HERO */}
       <section className="relative min-h-screen flex items-center justify-center px-6">
-
         <div className="absolute inset-0">
-
           <Image
             src="/images/hero.webp"
-            alt="Природа"
+            alt="Природа Крыма"
             fill
             priority
-            quality={72}
             sizes="100vw"
             className="object-cover opacity-60 select-none"
           />
 
           <div className="absolute inset-0 bg-gradient-to-b from-[#021008]/70 via-[#0b2415]/70 to-[#04140b]/90" />
-
         </div>
 
-        <div className="relative z-10 max-w-5xl w-full text-center">
+        <div className="relative z-20 max-w-7xl w-full">
+          <header className="mb-12">
+            <div className="flex items-center justify-between border border-[#8ea86d]/15 bg-[#08150d]/80 backdrop-blur-md px-6 py-5 rounded-2xl">
+              <Link
+                href="/"
+                className="text-3xl font-semibold text-[#e8e1d4] hover:text-[#c7d6a1] transition"
+              >
+                CatFans
+              </Link>
 
-          {/* LANGUAGE SWITCHER */}
-          <div className="absolute top-0 right-0 flex gap-3 text-sm">
+              <div className="hidden md:flex items-center gap-10">
+                <Link
+                  href="/program"
+                  className="uppercase tracking-[0.25em] text-sm text-[#9eb47d] hover:text-white transition"
+                >
+                  Программа
+                </Link>
 
-            <a
-              href="/"
-              className="px-4 py-2 rounded-xl bg-[#6f8f3a] text-white"
-            >
-              RU
-            </a>
+                <Link
+                  href="/partners"
+                  className="uppercase tracking-[0.25em] text-sm text-[#9eb47d] hover:text-white transition"
+                >
+                  Партнёрам
+                </Link>
+              </div>
 
-            <a
-              href="/en"
-              className="px-4 py-2 rounded-xl border border-[#8ea86d]/25 bg-[#102117]/40 hover:bg-[#1a3322] transition"
-            >
-              EN
-            </a>
+              <div className="flex items-center gap-4">
+                <a
+                  href="https://forms.yandex.ru/u/69fc85d7e010db277384797b/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hidden sm:flex px-6 py-3 border border-[#8ea86d]/30 bg-[#6f8f3a]/10 hover:bg-[#6f8f3a]/20 rounded-xl uppercase tracking-[0.18em] text-xs text-[#dce8c6] transition"
+                >
+                  Подать заявку
+                </a>
 
+                <div className="flex gap-3 text-sm">
+                  <Link href="/" className="text-[#dce8c6]">
+                    RU
+                  </Link>
+
+                  <Link
+                    href="/en"
+                    className="text-[#6f7d67] hover:text-[#dce8c6] transition"
+                  >
+                    EN
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </header>
+
+          <div className="text-center max-w-5xl mx-auto pt-8">
+            <p className="uppercase tracking-[0.35em] text-sm text-[#c7d6a1] mb-6">
+              ЭКО • RETREAT • IMMERSIVE EXPERIENCE
+            </p>
+
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
+              Перезагрузка: Истоки
+            </h1>
+
+            <p className="text-lg md:text-2xl text-[#d9e5d0] max-w-3xl mx-auto mb-10 leading-relaxed">
+              Временный выход из современной реальности ради восстановления
+              через природу, традиции и образ жизни степных народов Крыма.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+              <a
+                href="https://forms.yandex.ru/u/69fc85d7e010db277384797b/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 rounded-2xl bg-[#6f8f3a] text-white font-semibold hover:scale-105 transition shadow-xl shadow-[#6f8f3a]/20"
+              >
+                🌿 Подать заявку
+              </a>
+
+              <a
+                href="#concept"
+                className="px-8 py-4 rounded-2xl border border-[#8ea86d]/20 bg-[#102117]/50 backdrop-blur-sm hover:bg-[#1a3322] transition"
+              >
+                Узнать концепцию
+              </a>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="border border-[#8ea86d]/15 rounded-2xl p-4 bg-[#102117]/55 backdrop-blur-sm">
+                🌿 5 дней погружения
+              </div>
+
+              <div className="border border-[#8ea86d]/15 rounded-2xl p-4 bg-[#102117]/55 backdrop-blur-sm">
+                📵 Цифровой детокс
+              </div>
+
+              <div className="border border-[#8ea86d]/15 rounded-2xl p-4 bg-[#102117]/55 backdrop-blur-sm">
+                ⛰️ Природа Крыма
+              </div>
+
+              <div className="border border-[#8ea86d]/15 rounded-2xl p-4 bg-[#102117]/55 backdrop-blur-sm">
+                ✨ Ограниченные места
+              </div>
+            </div>
           </div>
-
-          <p className="uppercase tracking-[0.35em] text-sm text-[#c7d6a1] mb-6">
-            ЭКО • RETREAT • IMMERSIVE EXPERIENCE
-          </p>
-
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-            Перезагрузка: Истоки
-          </h1>
-
-          <p className="text-lg md:text-2xl text-[#d9e5d0] max-w-3xl mx-auto mb-10 leading-relaxed">
-            Временный выход из современной реальности ради восстановления через
-            природу, традиции и образ жизни древних культур.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-
-            <a
-              href="https://forms.yandex.ru/u/69fc85d7e010db277384797b/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 rounded-2xl bg-[#6f8f3a] text-white font-semibold hover:scale-105 transition shadow-xl shadow-[#6f8f3a]/20"
-            >
-              🌿 Подать заявку
-            </a>
-
-            <a
-              href="#concept"
-              className="px-8 py-4 rounded-2xl border border-[#8ea86d]/20 bg-[#102117]/50 backdrop-blur-sm hover:bg-[#1a3322] transition"
-            >
-              Узнать концепцию
-            </a>
-
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 text-sm">
-
-            <div className="border border-[#8ea86d]/15 rounded-2xl p-4 bg-[#102117]/55 backdrop-blur-sm">
-              🌿 5 дней погружения
-            </div>
-
-            <div className="border border-[#8ea86d]/15 rounded-2xl p-4 bg-[#102117]/55 backdrop-blur-sm">
-              📵 Цифровой детокс
-            </div>
-
-            <div className="border border-[#8ea86d]/15 rounded-2xl p-4 bg-[#102117]/55 backdrop-blur-sm">
-              ⛰️ Природа Крыма
-            </div>
-
-            <div className="border border-[#8ea86d]/15 rounded-2xl p-4 bg-[#102117]/55 backdrop-blur-sm">
-              ✨ Ограниченные места
-            </div>
-
-          </div>
-
         </div>
       </section>
 
-      {/* CONCEPT */}
-      <section
-        id="concept"
-        className="py-24 px-6 max-w-7xl mx-auto"
+      {/* NAVIGATION */}
+<section className="py-12 px-6 border-t border-[#8ea86d]/10 bg-[#06180e]">
+
+  <div className="max-w-5xl mx-auto">
+
+    <div className="grid md:grid-cols-2 gap-4">
+
+      {/* PROGRAM */}
+      <Link
+        href="/program"
+        className="group rounded-3xl border border-[#8ea86d]/10 bg-[#0d2015]/70 hover:border-[#8ea86d]/25 transition-all duration-300 overflow-hidden"
       >
+        <div className="flex items-center gap-5 p-5">
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-
-          <div>
+          {/* IMAGE */}
+          <div className="relative w-[92px] h-[92px] rounded-2xl overflow-hidden shrink-0">
 
             <Image
-              src="/images/hero.webp"
-              alt="Природа"
-              width={1200}
-              height={800}
-              quality={68}
+              src="/images/bizz.webp"
+              alt="Программа"
+              fill
               loading="lazy"
-              className="rounded-3xl shadow-xl mb-10 select-none"
+              quality={62}
+              sizes="92px"
+              className="object-cover group-hover:scale-105 transition duration-500"
             />
-
-            <p className="uppercase text-sm tracking-[0.3em] text-[#c7d6a1] mb-4">
-              О проекте
-            </p>
-
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-              Это не туризм.
-              <br />
-              Это проживание другой реальности.
-            </h2>
-
-            <p className="text-[#d9e5d0] text-lg leading-relaxed">
-              Проект объединяет элементы этнокультурного погружения,
-              природного восстановления и цифрового детокса.
-            </p>
 
           </div>
 
-          <div className="grid gap-6">
+          {/* CONTENT */}
+          <div className="min-w-0 flex-1">
 
-            {sections.map((item) => (
-              <div
-                key={item.title}
-                className="border border-[#8ea86d]/15 bg-[#102117]/60 rounded-3xl p-8 backdrop-blur-sm"
-              >
+            <p className="uppercase text-[10px] tracking-[0.28em] text-[#c7d6a1] mb-2">
+              Программа
+            </p>
 
-                <div className="text-4xl mb-4">
-                  {item.icon}
-                </div>
+            <h3 className="text-xl font-semibold leading-tight mb-2 text-[#f4f1e8]">
+              5 дней степного аула
+            </h3>
 
-                <h3 className="text-2xl font-semibold mb-3">
-                  {item.title}
-                </h3>
+            <p className="text-sm leading-relaxed text-[#d9e5d0]/75 mb-3">
+              Расписание, костры, игры и immersive-погружение.
+            </p>
 
-                <p className="text-[#d9e5d0] leading-relaxed">
-                  {item.text}
-                </p>
-
-              </div>
-            ))}
+            <div className="text-sm text-[#c7d6a1] group-hover:translate-x-1 transition-transform">
+              Смотреть →
+            </div>
 
           </div>
 
         </div>
-      </section>
+      </Link>
+
+      {/* PARTNERS */}
+      <Link
+        href="/partners"
+        className="group rounded-3xl border border-[#8ea86d]/10 bg-[#0d2015]/70 hover:border-[#8ea86d]/25 transition-all duration-300 overflow-hidden"
+      >
+        <div className="flex items-center gap-5 p-5">
+
+          {/* IMAGE */}
+          <div className="relative w-[92px] h-[92px] rounded-2xl overflow-hidden shrink-0">
+
+            <Image
+              src="/images/camni.webp"
+              alt="Партнёрам"
+              fill
+              loading="lazy"
+              quality={62}
+              sizes="92px"
+              className="object-cover group-hover:scale-105 transition duration-500"
+            />
+
+          </div>
+
+          {/* CONTENT */}
+          <div className="min-w-0 flex-1">
+
+            <p className="uppercase text-[10px] tracking-[0.28em] text-[#c7d6a1] mb-2">
+              Партнёрам
+            </p>
+
+            <h3 className="text-xl font-semibold leading-tight mb-2 text-[#f4f1e8]">
+              Инвестиции и сотрудничество
+            </h3>
+
+            <p className="text-sm leading-relaxed text-[#d9e5d0]/75 mb-3">
+              Экономика проекта и возможности партнёрства.
+            </p>
+
+            <div className="text-sm text-[#c7d6a1] group-hover:translate-x-1 transition-transform">
+              Открыть →
+            </div>
+
+          </div>
+
+        </div>
+      </Link>
+
+    </div>
+
+  </div>
+
+</section>
 
       {/* TIMELINE */}
       <section className="py-24 px-6 bg-[#072015]">
-
         <div className="max-w-6xl mx-auto">
-
           <div className="mb-16 text-center">
-
             <p className="uppercase text-sm tracking-[0.3em] text-[#c7d6a1] mb-4">
               Как проходит опыт
             </p>
@@ -256,42 +323,28 @@ export default function ImmersiveLanding() {
             <h2 className="text-4xl md:text-5xl font-bold">
               Путь внутренней перезагрузки
             </h2>
-
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-
             {timeline.map((item) => (
               <div
                 key={item.day}
                 className="border border-[#8ea86d]/15 rounded-3xl p-8 bg-[#102117]/60 backdrop-blur-sm"
               >
+                <div className="text-5xl mb-4">{item.icon}</div>
 
-                <div className="text-5xl mb-4">
-                  {item.icon}
-                </div>
+                <div className="text-[#c7d6a1] mb-4">{item.day}</div>
 
-                <div className="text-[#c7d6a1] mb-4">
-                  {item.day}
-                </div>
-
-                <p className="text-[#d9e5d0] leading-relaxed">
-                  {item.text}
-                </p>
-
+                <p className="text-[#d9e5d0] leading-relaxed">{item.text}</p>
               </div>
             ))}
-
           </div>
-
         </div>
       </section>
 
       {/* AUDIENCE */}
       <section className="py-24 px-6 max-w-6xl mx-auto">
-
         <div className="text-center mb-16">
-
           <p className="uppercase text-sm tracking-[0.3em] text-[#c7d6a1] mb-4">
             Для кого проект
           </p>
@@ -299,11 +352,9 @@ export default function ImmersiveLanding() {
           <h2 className="text-4xl md:text-5xl font-bold">
             Для тех, кто устал жить на скорости
           </h2>
-
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
           {audience.map((item) => (
             <div
               key={item}
@@ -312,31 +363,24 @@ export default function ImmersiveLanding() {
               {item}
             </div>
           ))}
-
         </div>
       </section>
 
       {/* INCLUDED */}
       <section className="py-24 px-6 bg-[#072015]">
-
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-
           <div>
-
             <Image
               src="/images/bg.webp"
               alt="Immersive"
               width={1400}
               height={900}
-              quality={68}
               loading="lazy"
               className="rounded-3xl w-full h-[600px] object-cover shadow-xl select-none"
             />
-
           </div>
 
           <div>
-
             <p className="uppercase text-sm tracking-[0.3em] text-[#c7d6a1] mb-4">
               Что входит
             </p>
@@ -346,7 +390,6 @@ export default function ImmersiveLanding() {
             </h2>
 
             <div className="space-y-4 text-lg text-[#d9e5d0]">
-
               <div className="border-b border-[#8ea86d]/15 pb-4">
                 ✓ Проживание в атмосферной локации
               </div>
@@ -370,34 +413,27 @@ export default function ImmersiveLanding() {
               <div className="border-b border-[#8ea86d]/15 pb-4">
                 ✓ Минимизация цифрового шума
               </div>
-
             </div>
-
           </div>
-
         </div>
       </section>
 
       {/* LOCATION */}
       <section className="py-24 px-6">
-
         <div className="max-w-5xl mx-auto text-center">
-
           <p className="uppercase text-sm tracking-[0.3em] text-[#c7d6a1] mb-4">
             Локация
           </p>
 
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            Крым • Природное пространство проекта
+            Крым • Пространство проекта
           </h2>
 
           <p className="text-[#d9e5d0] text-lg leading-relaxed max-w-3xl mx-auto mb-10">
-            Проект проходит в природной локации Крыма вдали от городского шума
-            и цифровой перегрузки.
+            Природная локация вдали от городского шума и цифровой перегрузки.
           </p>
 
           <div className="rounded-3xl border border-[#8ea86d]/15 bg-[#102117]/65 p-8 backdrop-blur-sm shadow-xl inline-block">
-
             <div className="text-[#c7d6a1] text-sm uppercase tracking-[0.2em] mb-3">
               Координаты для навигатора
             </div>
@@ -410,19 +446,14 @@ export default function ImmersiveLanding() {
             >
               44°42.44'N, 34°1.17'E
             </a>
-
           </div>
-
         </div>
       </section>
 
       {/* FAQ */}
       <section className="py-24 px-6 bg-[#072015]">
-
         <div className="max-w-4xl mx-auto">
-
           <div className="text-center mb-16">
-
             <p className="uppercase text-sm tracking-[0.3em] text-[#c7d6a1] mb-4">
               FAQ
             </p>
@@ -430,54 +461,39 @@ export default function ImmersiveLanding() {
             <h2 className="text-4xl md:text-5xl font-bold">
               Частые вопросы
             </h2>
-
           </div>
 
           <div className="space-y-6">
-
             {faq.map((item) => (
               <div
                 key={item.q}
                 className="rounded-3xl border border-[#8ea86d]/15 bg-[#102117]/60 p-8 backdrop-blur-sm"
               >
+                <h3 className="text-2xl font-semibold mb-4">🍃 {item.q}</h3>
 
-                <h3 className="text-2xl font-semibold mb-4">
-                  🍃 {item.q}
-                </h3>
-
-                <p className="text-[#d9e5d0] leading-relaxed">
-                  {item.a}
-                </p>
-
+                <p className="text-[#d9e5d0] leading-relaxed">{item.a}</p>
               </div>
             ))}
-
           </div>
-
         </div>
       </section>
 
-      {/* CTA */}
+      {/* FINAL CTA */}
       <section className="relative py-32 px-6 text-center overflow-hidden">
-
         <div className="absolute inset-0">
-
           <Image
             src="/images/cat1.webp"
             alt="Природа"
             fill
-            quality={65}
             loading="lazy"
             sizes="100vw"
-            className="object-cover opacity-50 select-none"
+            className="object-cover opacity-45 select-none"
           />
 
           <div className="absolute inset-0 bg-gradient-to-b from-[#021008]/70 to-[#04140b]/90" />
-
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto">
-
           <p className="uppercase text-sm tracking-[0.3em] text-[#c7d6a1] mb-6">
             Финальный шаг
           </p>
@@ -489,8 +505,8 @@ export default function ImmersiveLanding() {
           </h2>
 
           <p className="text-xl text-[#e5eddc] mb-12 leading-relaxed">
-            Количество мест ограничено. Оставьте заявку и получите информацию
-            о ближайших заездах.
+            Количество мест ограничено. Оставьте заявку и получите информацию о
+            ближайших заездах.
           </p>
 
           <a
@@ -501,26 +517,20 @@ export default function ImmersiveLanding() {
           >
             🌿 Подать заявку
           </a>
-
         </div>
       </section>
 
       {/* FOOTER */}
       <footer className="w-full border-t border-white/10">
-
         <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/60">
-
-          <div>
-            © 2026 CatFans. Все права защищены.
-          </div>
+          <div>© 2026 CatFans. Все права защищены.</div>
 
           <div className="flex flex-wrap items-center justify-center gap-6">
-
             <a
               href="mailto:no_the_cat@vk.com"
               className="hover:text-white transition"
             >
-              Наши контакты: no_the_cat@vk.com
+              no_the_cat@vk.com
             </a>
 
             <a
@@ -532,18 +542,12 @@ export default function ImmersiveLanding() {
               Telegram
             </a>
 
-            <a
-              href="/privacy"
-              className="hover:text-white transition"
-            >
+            <Link href="/privacy" className="hover:text-white transition">
               Политика конфиденциальности
-            </a>
-
+            </Link>
           </div>
-
         </div>
       </footer>
-
     </main>
   )
 }
