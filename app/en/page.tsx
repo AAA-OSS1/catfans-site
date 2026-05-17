@@ -1,28 +1,35 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export const dynamic = 'force-static'
 
 export const metadata = {
   title: 'CatFans — Reboot: Origins',
   description:
-    'Immersive eco-retreat in Crimea: digital detox, nature, recovery, and a return to a slower rhythm of life.',
+    'Immersive eco-retreat in Crimea: digital detox, nature, recovery, and immersion into a different rhythm of life.',
+  openGraph: {
+    title: 'CatFans — Reboot: Origins',
+    description:
+      'Immersive eco-retreat in Crimea: digital detox, nature, recovery, and immersion into a different rhythm of life.',
+    url: 'https://catfans.ru/en',
+  },
 }
 
 const sections = [
   {
     icon: '🌿',
     title: 'Digital Detox',
-    text: 'Complete disconnection from information overload and a return to a natural rhythm of life.',
+    text: 'Complete disconnection from information noise and a return to the natural rhythm of life.',
   },
   {
     icon: '⛰️',
-    title: 'Ancient Lifestyle',
-    text: 'Immersion in traditional living, nature, and authentic experiences.',
+    title: 'Life of the Steppe Cultures',
+    text: 'Immersion into the atmosphere of traditional lifestyle, nature, and authentic experiences.',
   },
   {
     icon: '✨',
     title: 'Inner Recovery',
-    text: 'Not entertainment-based relaxation, but a deep internal reset.',
+    text: 'Not entertainment tourism, but a deep internal reset.',
   },
 ]
 
@@ -30,37 +37,37 @@ const timeline = [
   {
     icon: '🌱',
     day: 'Day 1',
-    text: 'Disconnecting from the digital world and entering the atmosphere of the project.',
+    text: 'Leaving the digital environment and immersing into the atmosphere of the project.',
   },
   {
     icon: '🥾',
     day: 'Day 2–3',
-    text: 'Living in rhythm with nature, physical activity, and participation in everyday routines.',
+    text: 'Living in rhythm with nature, physical activity and participation in everyday camp life.',
   },
   {
     icon: '🧘',
     day: 'Day 4',
-    text: 'Deep recovery, mindfulness, and inner slowing down.',
+    text: 'Deep restoration, mindfulness and internal slowing down.',
   },
   {
     icon: '☀️',
     day: 'Day 5',
-    text: 'Returning to modern life with a renewed state of mind and perspective.',
+    text: 'Returning to the modern world with a renewed state of mind and perception.',
   },
 ]
 
 const audience = [
-  '🌲 Tired of city life and information overload',
+  '🌲 Exhaustion from city life and information overload',
   '🕊️ Emotional burnout',
   '🌿 Need for recovery',
-  '✨ Searching for meaningful rest',
-  '⛰️ Desire to experience something unique',
-  '🍃 Interest in nature and Crimean culture',
+  '✨ Search for meaningful rest',
+  '⛰️ Desire to live through a unique experience',
+  '🍃 Interest in the nature and culture of Crimea',
 ]
 
 const faq = [
   {
-    q: 'Do I need special training?',
+    q: 'Do I need any special preparation?',
     a: 'No. The program is designed for ordinary people without special experience.',
   },
   {
@@ -68,16 +75,16 @@ const faq = [
     a: 'The project is based on digital detox and minimizing contact with technology.',
   },
   {
-    q: 'Is it safe?',
+    q: 'Is participation safe?',
     a: 'All activities are supervised by the project team.',
   },
   {
     q: 'What level of comfort should I expect?',
-    a: 'We maintain a balance between authenticity, safety, and basic comfort.',
+    a: 'We maintain a balance between authenticity, safety and basic comfort.',
   },
 ]
 
-export default function ImmersiveLandingEN() {
+export default function ImmersiveLanding() {
   return (
     <main className="bg-[#04140b] text-[#f4f1e8] min-h-screen overflow-hidden">
 
@@ -88,10 +95,9 @@ export default function ImmersiveLandingEN() {
 
           <Image
             src="/images/hero.webp"
-            alt="Nature"
+            alt="Nature of Crimea"
             fill
             priority
-            quality={72}
             sizes="100vw"
             className="object-cover opacity-60 select-none"
           />
@@ -100,161 +106,258 @@ export default function ImmersiveLandingEN() {
 
         </div>
 
-        <div className="relative z-10 max-w-5xl w-full text-center">
+        <div className="relative z-20 max-w-7xl w-full">
 
-          {/* LANGUAGE SWITCHER */}
-          <div className="absolute top-0 right-0 flex gap-3 text-sm">
+          <header className="mb-12">
 
-            <a
-              href="/"
-              className="px-4 py-2 rounded-xl border border-[#8ea86d]/25 bg-[#102117]/40 hover:bg-[#1a3322] transition"
-            >
-              RU
-            </a>
+            <div className="flex items-center justify-between border border-[#8ea86d]/15 bg-[#08150d]/80 backdrop-blur-md px-6 py-5 rounded-2xl">
 
-            <a
-              href="/en"
-              className="px-4 py-2 rounded-xl bg-[#6f8f3a] text-white"
-            >
-              EN
-            </a>
-
-          </div>
-
-          <p className="uppercase tracking-[0.35em] text-sm text-[#c7d6a1] mb-6">
-            ECO • RETREAT • IMMERSIVE EXPERIENCE
-          </p>
-
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-            Reboot: Origins
-          </h1>
-
-          <p className="text-lg md:text-2xl text-[#d9e5d0] max-w-3xl mx-auto mb-10 leading-relaxed">
-            A temporary escape from modern reality for recovery through nature,
-            traditions, and the lifestyle of ancient cultures.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-
-            <a
-              href="https://forms.yandex.ru/u/69fc85d7e010db277384797b/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 rounded-2xl bg-[#6f8f3a] text-white font-semibold hover:scale-105 transition shadow-xl shadow-[#6f8f3a]/20"
-            >
-              🌿 Apply Now
-            </a>
-
-            <a
-              href="#concept"
-              className="px-8 py-4 rounded-2xl border border-[#8ea86d]/20 bg-[#102117]/50 backdrop-blur-sm hover:bg-[#1a3322] transition"
-            >
-              Explore the Concept
-            </a>
-
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 text-sm">
-
-            <div className="border border-[#8ea86d]/15 rounded-2xl p-4 bg-[#102117]/55 backdrop-blur-sm">
-              🌿 5 Days Immersion
-            </div>
-
-            <div className="border border-[#8ea86d]/15 rounded-2xl p-4 bg-[#102117]/55 backdrop-blur-sm">
-              📵 Digital Detox
-            </div>
-
-            <div className="border border-[#8ea86d]/15 rounded-2xl p-4 bg-[#102117]/55 backdrop-blur-sm">
-              ⛰️ Nature of Crimea
-            </div>
-
-            <div className="border border-[#8ea86d]/15 rounded-2xl p-4 bg-[#102117]/55 backdrop-blur-sm">
-              ✨ Limited Spots
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* CONCEPT */}
-      <section
-        id="concept"
-        className="py-24 px-6 max-w-7xl mx-auto"
-      >
-
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-
-          <div>
-
-            <Image
-              src="/images/hero.webp"
-              alt="Nature"
-              width={1200}
-              height={800}
-              quality={68}
-              loading="lazy"
-              className="rounded-3xl shadow-xl mb-10 select-none"
-            />
-
-            <p className="uppercase text-sm tracking-[0.3em] text-[#c7d6a1] mb-4">
-              About the Project
-            </p>
-
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-              This is not tourism.
-              <br />
-              This is living inside another reality.
-            </h2>
-
-            <p className="text-[#d9e5d0] text-lg leading-relaxed">
-              The project combines elements of ethnocultural immersion,
-              natural recovery, and digital detox.
-            </p>
-
-          </div>
-
-          <div className="grid gap-6">
-
-            {sections.map((item) => (
-              <div
-                key={item.title}
-                className="border border-[#8ea86d]/15 bg-[#102117]/60 rounded-3xl p-8 backdrop-blur-sm"
+              <Link
+                href="/en"
+                className="text-3xl font-semibold text-[#e8e1d4] hover:text-[#c7d6a1] transition"
               >
+                CatFans
+              </Link>
 
-                <div className="text-4xl mb-4">
-                  {item.icon}
-                </div>
+              <div className="hidden md:flex items-center gap-10">
 
-                <h3 className="text-2xl font-semibold mb-3">
-                  {item.title}
-                </h3>
+                <Link
+                  href="/program"
+                  className="uppercase tracking-[0.25em] text-sm text-[#9eb47d] hover:text-white transition"
+                >
+                  Program
+                </Link>
 
-                <p className="text-[#d9e5d0] leading-relaxed">
-                  {item.text}
-                </p>
+                <Link
+                  href="/partners"
+                  className="uppercase tracking-[0.25em] text-sm text-[#9eb47d] hover:text-white transition"
+                >
+                  Partners
+                </Link>
 
               </div>
-            ))}
+
+              <div className="flex items-center gap-4">
+
+                <a
+                  href="https://forms.yandex.ru/u/69fc85d7e010db277384797b/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hidden sm:flex px-6 py-3 border border-[#8ea86d]/30 bg-[#6f8f3a]/10 hover:bg-[#6f8f3a]/20 rounded-xl uppercase tracking-[0.18em] text-xs text-[#dce8c6] transition"
+                >
+                  Apply
+                </a>
+
+                <div className="flex gap-3 text-sm">
+
+                  <Link
+                    href="/"
+                    className="text-[#6f7d67] hover:text-[#dce8c6] transition"
+                  >
+                    RU
+                  </Link>
+
+                  <Link
+                    href="/en"
+                    className="text-[#dce8c6]"
+                  >
+                    EN
+                  </Link>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </header>
+
+          <div className="text-center max-w-5xl mx-auto pt-8">
+
+            <p className="uppercase tracking-[0.35em] text-sm text-[#c7d6a1] mb-6">
+              ECO • RETREAT • IMMERSIVE EXPERIENCE
+            </p>
+
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
+              Reboot: Origins
+            </h1>
+
+            <p className="text-lg md:text-2xl text-[#d9e5d0] max-w-3xl mx-auto mb-10 leading-relaxed">
+              A temporary escape from modern reality for recovery
+              through nature, traditions and the lifestyle
+              of the steppe peoples of Crimea.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+
+              <a
+                href="https://forms.yandex.ru/u/69fc85d7e010db277384797b/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 rounded-2xl bg-[#6f8f3a] text-white font-semibold hover:scale-105 transition shadow-xl shadow-[#6f8f3a]/20"
+              >
+                🌿 Apply Now
+              </a>
+
+              <a
+                href="#concept"
+                className="px-8 py-4 rounded-2xl border border-[#8ea86d]/20 bg-[#102117]/50 backdrop-blur-sm hover:bg-[#1a3322] transition"
+              >
+                Learn the Concept
+              </a>
+
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+              <div className="border border-[#8ea86d]/15 rounded-2xl p-4 bg-[#102117]/55 backdrop-blur-sm">
+                🌿 5 days immersion
+              </div>
+
+              <div className="border border-[#8ea86d]/15 rounded-2xl p-4 bg-[#102117]/55 backdrop-blur-sm">
+                📵 Digital detox
+              </div>
+
+              <div className="border border-[#8ea86d]/15 rounded-2xl p-4 bg-[#102117]/55 backdrop-blur-sm">
+                ⛰️ Nature of Crimea
+              </div>
+
+              <div className="border border-[#8ea86d]/15 rounded-2xl p-4 bg-[#102117]/55 backdrop-blur-sm">
+                ✨ Limited spots
+              </div>
+
+            </div>
 
           </div>
 
         </div>
+
+      </section>
+
+      {/* NAVIGATION */}
+      <section className="py-12 px-6 border-t border-[#8ea86d]/10 bg-[#06180e]">
+
+        <div className="max-w-5xl mx-auto">
+
+          <div className="grid md:grid-cols-2 gap-4">
+
+            {/* PROGRAM */}
+            <Link
+              href="/program"
+              className="group rounded-3xl border border-[#8ea86d]/10 bg-[#0d2015]/70 hover:border-[#8ea86d]/25 transition-all duration-300 overflow-hidden"
+            >
+
+              <div className="flex items-center gap-5 p-5">
+
+                {/* IMAGE */}
+                <div className="relative w-[92px] h-[92px] rounded-2xl overflow-hidden shrink-0">
+
+                  <Image
+                    src="/images/bizz.webp"
+                    alt="Program"
+                    fill
+                    loading="lazy"
+                    quality={62}
+                    sizes="92px"
+                    className="object-cover group-hover:scale-105 transition duration-500"
+                  />
+
+                </div>
+
+                {/* CONTENT */}
+                <div className="min-w-0 flex-1">
+
+                  <p className="uppercase text-[10px] tracking-[0.28em] text-[#c7d6a1] mb-2">
+                    Program
+                  </p>
+
+                  <h3 className="text-xl font-semibold leading-tight mb-2 text-[#f4f1e8]">
+                    5 days of a steppe aul
+                  </h3>
+
+                  <p className="text-sm leading-relaxed text-[#d9e5d0]/75 mb-3">
+                    Schedule, campfires, games and immersive experience.
+                  </p>
+
+                  <div className="text-sm text-[#c7d6a1] group-hover:translate-x-1 transition-transform">
+                    Explore →
+                  </div>
+
+                </div>
+
+              </div>
+
+            </Link>
+                        {/* PARTNERS */}
+            <Link
+              href="/partners"
+              className="group rounded-3xl border border-[#8ea86d]/10 bg-[#0d2015]/70 hover:border-[#8ea86d]/25 transition-all duration-300 overflow-hidden"
+            >
+
+              <div className="flex items-center gap-5 p-5">
+
+                {/* IMAGE */}
+                <div className="relative w-[92px] h-[92px] rounded-2xl overflow-hidden shrink-0">
+
+                  <Image
+                    src="/images/camni.webp"
+                    alt="Partners"
+                    fill
+                    loading="lazy"
+                    quality={62}
+                    sizes="92px"
+                    className="object-cover group-hover:scale-105 transition duration-500"
+                  />
+
+                </div>
+
+                {/* CONTENT */}
+                <div className="min-w-0 flex-1">
+
+                  <p className="uppercase text-[10px] tracking-[0.28em] text-[#c7d6a1] mb-2">
+                    Partners
+                  </p>
+
+                  <h3 className="text-xl font-semibold leading-tight mb-2 text-[#f4f1e8]">
+                    Investments & Partnerships
+                  </h3>
+
+                  <p className="text-sm leading-relaxed text-[#d9e5d0]/75 mb-3">
+                    Project economics and partnership opportunities.
+                  </p>
+
+                  <div className="text-sm text-[#c7d6a1] group-hover:translate-x-1 transition-transform">
+                    Open →
+                  </div>
+
+                </div>
+
+              </div>
+
+            </Link>
+
+          </div>
+
+        </div>
+
       </section>
 
       {/* TIMELINE */}
-      <section className="py-24 px-6 bg-[#072015]">
+      <section
+        id="concept"
+        className="py-24 px-6 bg-[#072015]"
+      >
 
         <div className="max-w-6xl mx-auto">
 
           <div className="mb-16 text-center">
 
             <p className="uppercase text-sm tracking-[0.3em] text-[#c7d6a1] mb-4">
-              How the Experience Works
+              How the experience unfolds
             </p>
 
             <h2 className="text-4xl md:text-5xl font-bold">
-              The Path of Inner Reboot
+              The path of inner reboot
             </h2>
 
           </div>
@@ -262,6 +365,7 @@ export default function ImmersiveLandingEN() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
             {timeline.map((item) => (
+
               <div
                 key={item.day}
                 className="border border-[#8ea86d]/15 rounded-3xl p-8 bg-[#102117]/60 backdrop-blur-sm"
@@ -280,11 +384,13 @@ export default function ImmersiveLandingEN() {
                 </p>
 
               </div>
+
             ))}
 
           </div>
 
         </div>
+
       </section>
 
       {/* AUDIENCE */}
@@ -293,11 +399,11 @@ export default function ImmersiveLandingEN() {
         <div className="text-center mb-16">
 
           <p className="uppercase text-sm tracking-[0.3em] text-[#c7d6a1] mb-4">
-            Who This Project Is For
+            Who is this project for
           </p>
 
           <h2 className="text-4xl md:text-5xl font-bold">
-            For Those Tired of Living at Full Speed
+            For those tired of living at full speed
           </h2>
 
         </div>
@@ -305,15 +411,18 @@ export default function ImmersiveLandingEN() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
           {audience.map((item) => (
+
             <div
               key={item}
               className="rounded-3xl border border-[#8ea86d]/15 bg-[#102117]/60 p-8 text-lg backdrop-blur-sm"
             >
               {item}
             </div>
+
           ))}
 
         </div>
+
       </section>
 
       {/* INCLUDED */}
@@ -325,10 +434,9 @@ export default function ImmersiveLandingEN() {
 
             <Image
               src="/images/bg.webp"
-              alt="Immersive Experience"
+              alt="Immersive"
               width={1400}
               height={900}
-              quality={68}
               loading="lazy"
               className="rounded-3xl w-full h-[600px] object-cover shadow-xl select-none"
             />
@@ -338,11 +446,11 @@ export default function ImmersiveLandingEN() {
           <div>
 
             <p className="uppercase text-sm tracking-[0.3em] text-[#c7d6a1] mb-4">
-              What’s Included
+              What is included
             </p>
 
             <h2 className="text-4xl md:text-5xl font-bold mb-8">
-              Full Immersion
+              Full immersion
             </h2>
 
             <div className="space-y-4 text-lg text-[#d9e5d0]">
@@ -356,7 +464,7 @@ export default function ImmersiveLandingEN() {
               </div>
 
               <div className="border-b border-[#8ea86d]/15 pb-4">
-                ✓ Physical activity and nature immersion
+                ✓ Physical activity and nature
               </div>
 
               <div className="border-b border-[#8ea86d]/15 pb-4">
@@ -376,6 +484,7 @@ export default function ImmersiveLandingEN() {
           </div>
 
         </div>
+
       </section>
 
       {/* LOCATION */}
@@ -388,18 +497,17 @@ export default function ImmersiveLandingEN() {
           </p>
 
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            Crimea • Natural Retreat Area
+            Crimea • Project Space
           </h2>
 
           <p className="text-[#d9e5d0] text-lg leading-relaxed max-w-3xl mx-auto mb-10">
-            The project takes place in a natural area of Crimea far from city
-            noise and digital overload.
+            A natural location far from urban noise and digital overload.
           </p>
 
           <div className="rounded-3xl border border-[#8ea86d]/15 bg-[#102117]/65 p-8 backdrop-blur-sm shadow-xl inline-block">
 
             <div className="text-[#c7d6a1] text-sm uppercase tracking-[0.2em] mb-3">
-              Navigation Coordinates
+              Coordinates for navigation
             </div>
 
             <a
@@ -414,6 +522,7 @@ export default function ImmersiveLandingEN() {
           </div>
 
         </div>
+
       </section>
 
       {/* FAQ */}
@@ -436,6 +545,7 @@ export default function ImmersiveLandingEN() {
           <div className="space-y-6">
 
             {faq.map((item) => (
+
               <div
                 key={item.q}
                 className="rounded-3xl border border-[#8ea86d]/15 bg-[#102117]/60 p-8 backdrop-blur-sm"
@@ -450,14 +560,16 @@ export default function ImmersiveLandingEN() {
                 </p>
 
               </div>
+
             ))}
 
           </div>
 
         </div>
+
       </section>
 
-      {/* CTA */}
+      {/* FINAL CTA */}
       <section className="relative py-32 px-6 text-center overflow-hidden">
 
         <div className="absolute inset-0">
@@ -466,10 +578,9 @@ export default function ImmersiveLandingEN() {
             src="/images/cat1.webp"
             alt="Nature"
             fill
-            quality={65}
             loading="lazy"
             sizes="100vw"
-            className="object-cover opacity-50 select-none"
+            className="object-cover opacity-45 select-none"
           />
 
           <div className="absolute inset-0 bg-gradient-to-b from-[#021008]/70 to-[#04140b]/90" />
@@ -483,14 +594,19 @@ export default function ImmersiveLandingEN() {
           </p>
 
           <h2 className="text-5xl md:text-7xl font-bold leading-tight mb-8">
-            You are not escaping —
+
+            You are not taking a vacation —
             <br />
             you are returning to yourself
+
           </h2>
 
           <p className="text-xl text-[#e5eddc] mb-12 leading-relaxed">
-            Places are limited. Leave an application and receive information
-            about upcoming retreats.
+
+            The number of spots is limited.
+            Leave an application and receive information
+            about upcoming sessions.
+
           </p>
 
           <a
@@ -503,6 +619,7 @@ export default function ImmersiveLandingEN() {
           </a>
 
         </div>
+
       </section>
 
       {/* FOOTER */}
@@ -520,7 +637,7 @@ export default function ImmersiveLandingEN() {
               href="mailto:no_the_cat@vk.com"
               className="hover:text-white transition"
             >
-              Сontacts: no_the_cat@vk.com
+              no_the_cat@vk.com
             </a>
 
             <a
@@ -532,16 +649,17 @@ export default function ImmersiveLandingEN() {
               Telegram
             </a>
 
-            <a
+            <Link
               href="/privacy"
               className="hover:text-white transition"
             >
               Privacy Policy
-            </a>
+            </Link>
 
           </div>
 
         </div>
+
       </footer>
 
     </main>

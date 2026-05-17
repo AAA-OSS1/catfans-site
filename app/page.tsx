@@ -313,7 +313,10 @@ export default function ImmersiveLanding() {
 </section>
 
       {/* TIMELINE */}
-      <section className="py-24 px-6 bg-[#072015]">
+      <section
+  id="concept"
+  className="py-24 px-6 bg-[#072015]"
+>
         <div className="max-w-6xl mx-auto">
           <div className="mb-16 text-center">
             <p className="uppercase text-sm tracking-[0.3em] text-[#c7d6a1] mb-4">

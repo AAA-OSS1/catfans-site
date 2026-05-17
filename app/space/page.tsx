@@ -309,7 +309,7 @@ export default function SpacePage() {
               dpr={isMobile ? 1 : [1, 2]}
               camera={{
                 position: isMobile
-                  ? [8, 5, 8]
+                  ? [11, 6, 11]
                   : [10, 7, 10],
 
                 fov: isMobile
@@ -350,8 +350,8 @@ export default function SpacePage() {
               {/* CONTROLS */}
               <OrbitControls
                 enablePan={false}
-                minDistance={isMobile ? 5 : 6}
-                maxDistance={isMobile ? 12 : 18}
+                minDistance={isMobile ? 4 : 6}
+                maxDistance={isMobile ? 22 : 18}
                 maxPolarAngle={Math.PI / 2.1}
                 autoRotate={!isMobile}
                 autoRotateSpeed={0.3}
