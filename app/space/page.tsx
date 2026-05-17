@@ -137,10 +137,10 @@ export default function SpacePage() {
     useState(false)
 
   const resizeTimeoutRef =
-    useRef<NodeJS.Timeout>()
+    useRef<NodeJS.Timeout | null>(null)
 
   /* =========================
-     MOBILE DETECTION
+     MOBILE DETECTIONS
   ========================= */
 
   useEffect(() => {
