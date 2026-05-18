@@ -422,36 +422,100 @@ export default function ImmersiveLanding() {
       </section>
 
       {/* LOCATION */}
-      <section className="py-24 px-6">
-        <div className="max-w-5xl mx-auto text-center">
-          <p className="uppercase text-sm tracking-[0.3em] text-[#c7d6a1] mb-4">
-            Локация
-          </p>
+<section className="py-24 px-6">
 
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            Крым • Пространство проекта
-          </h2>
+  <div className="max-w-5xl mx-auto text-center">
 
-          <p className="text-[#d9e5d0] text-lg leading-relaxed max-w-3xl mx-auto mb-10">
-            Природная локация вдали от городского шума и цифровой перегрузки.
-          </p>
+    <p className="uppercase text-sm tracking-[0.3em] text-[#c7d6a1] mb-4">
+      Локация
+    </p>
 
-          <div className="rounded-3xl border border-[#8ea86d]/15 bg-[#102117]/65 p-8 backdrop-blur-sm shadow-xl inline-block">
-            <div className="text-[#c7d6a1] text-sm uppercase tracking-[0.2em] mb-3">
-              Координаты для навигатора
-            </div>
+    <h2 className="text-4xl md:text-5xl font-bold mb-8">
+      Крым • Пространство проекта
+    </h2>
 
-            <a
-              href="https://yandex.ru/maps/?pt=34.019500,44.707333&z=13&l=map"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-2xl font-semibold hover:text-[#c7d6a1] transition"
-            >
-              44°42.44'N, 34°1.17'E
-            </a>
-          </div>
+    <p className="text-[#d9e5d0] text-lg leading-relaxed max-w-3xl mx-auto mb-10">
+      Природная локация вдали от городского шума и цифровой перегрузки.
+    </p>
+
+    {/* COORDINATES */}
+    <div className="rounded-3xl border border-[#8ea86d]/15 bg-[#102117]/65 p-8 backdrop-blur-sm shadow-xl inline-block mb-10">
+
+      <div className="text-[#c7d6a1] text-sm uppercase tracking-[0.2em] mb-3">
+        Координаты для навигатора
+      </div>
+
+      <a
+        href="https://yandex.ru/maps/?pt=34.019500,44.707333&z=13&l=map"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-2xl font-semibold hover:text-[#c7d6a1] transition"
+      >
+        44°42.44'N, 34°1.17'E
+      </a>
+
+    </div>
+
+    {/* 3D SPACE */}
+    <div className="rounded-3xl border border-[#8ea86d]/15 bg-[#102117]/55 p-5 md:p-6 backdrop-blur-sm shadow-xl max-w-4xl mx-auto">
+
+      <div className="flex flex-col lg:flex-row items-center gap-6">
+
+        {/* IMAGE */}
+        <div className="relative w-full lg:w-[260px] h-[180px] rounded-2xl overflow-hidden shrink-0">
+
+          <Image
+            src="/images/space.png"
+            alt="3D пространство"
+            fill
+            loading="lazy"
+            className="object-cover"
+          />
+
         </div>
-      </section>
+
+        {/* CONTENT */}
+        <div className="text-left flex-1">
+
+          <p className="uppercase tracking-[0.25em] text-[#c7d6a1] text-xs mb-3">
+
+            Интерактивная карта
+
+          </p>
+
+          <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-tight">
+
+            3D-модель пространства проекта
+            <br />
+
+          </h3>
+
+          <p className="text-[#d9e5d0]/80 leading-relaxed mb-6 text-sm md:text-base max-w-xl">
+
+            Интерактивная immersive-модель позволяет
+            изучить атмосферу и архитектуру пространства
+            ещё до приезда на проект.
+
+          </p>
+
+          <Link
+            href="/space"
+            className="inline-flex px-6 py-3 rounded-2xl bg-[#c7a57a] text-black font-semibold hover:scale-105 transition"
+          >
+
+            Открыть 3D-пространство
+
+          </Link>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
       {/* FAQ */}
       <section className="py-24 px-6 bg-[#072015]">

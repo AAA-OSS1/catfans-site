@@ -32,7 +32,7 @@ const marketItems = [
 ]
 
 const ecoStats = [
-  { num: '9,4 млн ₽', desc: 'Инвестиции на запуск' },
+  { num: '9,32 млн ₽', desc: 'Инвестиции на запуск' },
   {
     num: '2 млн ₽',
     desc: 'Потенциальная выручка в месяц при самом консервативном подходе',
@@ -259,15 +259,15 @@ export default function PartnersPage() {
       {/* PRODUCT */}
       <section className="grid lg:grid-cols-2 border-b border-[#33271e]">
 
-        <div className="relative min-h-[300px]">
+        <div className="relative min-h-[240px] lg:min-h-[420px]">
           <Image
-            src="/images/bg.webp"
+            src="/images/yrt.png"
             alt="Юрты в Крыму"
             fill
             quality={68}
             loading="lazy"
             sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover"
+            className="object-contain bg-[#1a1510]"
           />
         </div>
 
