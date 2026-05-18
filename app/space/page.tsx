@@ -108,7 +108,7 @@ function ImagePlane() {
 
       <mesh>
 
-        <planeGeometry args={[8, 4.5]} />
+        <planeGeometry args={[6.8, 3.5]} />
 
         <meshStandardMaterial map={memoizedTexture} />
 
@@ -281,7 +281,7 @@ export default function SpacePage() {
       {/* OVERLAY */}
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/20 via-transparent to-black/50 pointer-events-none" />
 
-      {/* =========================
+            {/* =========================
           3D MODE
       ========================= */}
 
@@ -291,22 +291,31 @@ export default function SpacePage() {
 
           {!started ? (
 
-            <div className="w-full h-screen flex items-center justify-center">
+            <div className="w-full h-screen flex flex-col items-center justify-center px-6 text-center">
 
-              <button
-                onClick={() => setStarted(true)}
-                aria-label="Запустить 3D визуализацию"
-                className="px-7 md:px-8 py-4 md:py-5 border border-[#c7a57a] text-[#f5efe6] uppercase tracking-[0.25em] text-xs md:text-sm hover:bg-[#c7a57a] hover:text-black transition"
-              >
-                Запустить 3D МАКЕТ
-              </button>
+  <button
+    onClick={() => setStarted(true)}
+    aria-label="Запустить 3D визуализацию"
+    className="px-8 py-5 rounded-2xl bg-[#c7a57a] text-black font-semibold hover:scale-105 transition"
+  >
 
-            </div>
+    Открыть 3D-модель
+
+  </button>
+
+  <p className="text-[#d8cfc2]/60 text-xs tracking-[0.12em] uppercase mt-5">
+
+    Требуется стабильное интернет-соединение
+
+  </p>
+
+</div>
 
           ) : (
 
             <Canvas
-              dpr={isMobile ? 1 : [1, 2]}
+              dpr={isMobile ? 0.8 : [1, 2]}
+              frameloop={isMobile ? 'demand' : 'always'}
               camera={{
                 position: isMobile
                   ? [11, 6, 11]
@@ -377,7 +386,7 @@ export default function SpacePage() {
             dpr={isMobile ? 1 : [1, 2]}
             camera={{
               position: isMobile
-                ? [0, 3, 8]
+                ? [0, 4.5, 13]
                 : [0, 3.5, 9],
 
               fov: isMobile
@@ -411,8 +420,8 @@ export default function SpacePage() {
               enablePan={false}
               enableZoom={true}
               enableRotate={true}
-              minDistance={5}
-              maxDistance={12}
+              minDistance={6}
+              maxDistance={22}
             />
 
           </Canvas>
